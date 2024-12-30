@@ -4,7 +4,8 @@ import Contact from "@/models/contact"; // Contact model
 
 export async function POST(request: NextRequest) {
   try {
-    await Connectdp(); 
+    await Connectdp(); // Ensure connection to DB
+
     const formData = await request.json(); // Get form data from request
     console.log("Received FormData:", formData); // Log received data
 

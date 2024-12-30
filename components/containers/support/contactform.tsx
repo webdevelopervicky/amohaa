@@ -1,10 +1,12 @@
 "use client";
-import { useState } from "react";
-import axios from "axios";  
+import { useState, useEffect } from "react";
+import axios from "axios";
+import styles from "./style.module.css"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", number: "", subject: "" });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<string>("");
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -14,6 +16,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Sending...");
+    setShowModal(true);
 
     try {
       // Send data to the contact form API route
@@ -40,6 +43,16 @@ export default function ContactForm() {
       setStatus(`Error: ${error.message || "An error occurred. Please try again."}`);
     }
   };
+
+  // Automatically hide the status modal after 5 seconds
+  useEffect(() => {
+    if (showModal) {
+      const timer = setTimeout(() => {
+        setShowModal(false);
+      }, 10000); // Hide after 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [showModal]);
 
   return (
     <section className="contact-section fix section-padding">
@@ -134,12 +147,19 @@ export default function ContactForm() {
                     </div>
                   </div>
                 </form>
-                {status && <p className="mt-4 text-center text-sm text-gray-600">{status}</p>}
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Status Modal with timer line */}
+      {showModal && (
+        <div className={styles["status-modal"]}>
+          <p>{status}</p>
+          <div className={styles["timer-line"]}></div>
+        </div>
+      )}
     </section>
   );
 }

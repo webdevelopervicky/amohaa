@@ -1,12 +1,13 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const UserSchema = new mongoose.Schema({
-  name: { type: String },  // No validation
-  email: { type: String }, // No validation
-  number: { type: String }, // No validation
-  subject: { type: String }, // No validation
-  message: { type: String }, // No validation
+const contactSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+  number: String,
+  subject: String,
 });
 
-const User = mongoose.models.User || mongoose.model("contact", UserSchema);
-export default User;
+const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchema);
+
+export default Contact;

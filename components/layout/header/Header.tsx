@@ -431,8 +431,8 @@ const Header = () => {
                                         </div>
                                         <div className="content">
                                           <h6>
-                                            <Link href="https://store.amohaa.com/products/cpanel">
-                                              Share Hosting
+                                            <Link href="/web-hosting">
+                                              Web Hosting
                                             </Link>
                                           </h6>
                                           <p>About hostech</p>
