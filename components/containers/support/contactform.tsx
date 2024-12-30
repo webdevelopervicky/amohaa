@@ -1,7 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import styles from "./style.module.css"
+import styles from "./style.module.css";
+import one from "@/public/img/contact.png";
+import Image from 'next/image';
+import bgimage from "@/public/img/contactusbg.jpg"
+import { url } from "inspector";
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", number: "", subject: "" });
@@ -22,7 +27,7 @@ export default function ContactForm() {
       // Send data to the contact form API route
       const dbResponse = await axios.post("/api/contactform", formData);
       if (dbResponse.status === 201) {
-        setStatus("Message saved to database successfully!");
+        setStatus("Sending...");
 
         // Now, send the email
         const emailResponse = await fetch("/api/send-email", {
@@ -36,7 +41,7 @@ export default function ContactForm() {
           throw new Error(errorData.message || "Failed to send message.");
         }
 
-        setStatus("Message sent successfully!");
+        setStatus("Message send successfully!");
         setFormData({ name: "", email: "", message: "", number: "", subject: "" });
       }
     } catch (error: any) {
@@ -49,26 +54,55 @@ export default function ContactForm() {
     if (showModal) {
       const timer = setTimeout(() => {
         setShowModal(false);
-      }, 10000); // Hide after 5 seconds
+      }, 12000); // Hide after 5 seconds
       return () => clearTimeout(timer);
     }
   }, [showModal]);
 
   return (
-    <section className="contact-section fix section-padding">
+    <section className="contact-section fix p-5" style={{
+      backgroundImage: `url(${bgimage.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}>
+      <div className="text-center pb-5"><h1 style={{color:"white"}}>Contact us</h1></div>
       <div className="container">
+
         <div className="contact-wrapper">
+
           <div className="row g-4">
             <div className="col-lg-6">
               <div className="contact-left">
                 <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  Request a <br /> Consultation
+
                 </h2>
+                <div
+                  className="contact-image"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="500"
+                >
+
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.90089943376!2d77.46612593299315!3d12.953945614011563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1735573783802!5m2!1sen!2sin"
+                    width="600"
+                    height="550"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Map"
+                  ></iframe>
+                </div>
+
+
               </div>
             </div>
             <div className="col-lg-6">
               <div className="contact-right">
-                <h3 data-aos="fade-up" data-aos-duration="800">Get in Touch</h3>
+                <h3 data-aos="fade-up"className="text-center" data-aos-duration="800" style={{color:"white"}}>Your vision, our expertise. Get in touch to make it happen.</h3>
                 <form onSubmit={handleSubmit} className="contact-form-items">
                   <div className="row g-4">
                     <div className="col-lg-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -121,9 +155,11 @@ export default function ContactForm() {
                             required
                           >
                             <option value="">Select Subject</option>
-                            <option value="Domain">Domain</option>
-                            <option value="Hosting">Hosting</option>
-                            <option value="VPS Hosting">VPS Hosting</option>
+                            <option value="Domain">hosting </option>
+                            <option value="Hosting">wesite </option>
+                            <option value="VPS Hosting">SMS gateway</option>
+                            <option value="VPS Hosting">Whatapp gateway</option>
+                            <option value="VPS Hosting">Others</option>
                           </select>
                         </div>
                       </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import bread from "@/public/img/news/news.png";
 
-const BannerCommon = ({ title }: any) => {
+const BannerCommon = ({ title, image}: any) => {
   return (
     <div
       className="breadcrumb-wrapper bg-cover"
@@ -37,7 +37,7 @@ const BannerCommon = ({ title }: any) => {
             data-aos-duration="800"
             data-aos-delay="400"
           >
-            <Image src={bread} alt="img" width={500} height={400} priority />
+            <Image src={image} alt="img" width={500} height={400} priority />
           </div>
         </div>
       </div>

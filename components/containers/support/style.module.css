@@ -1,100 +1,169 @@
 /* Modal for status message */
+
 .status-modal {
     position: fixed;
-    top: 20px;
+    top: 100px;
     right: 20px;
     background-color: white;
     border-radius: 8px;
     padding: 15px 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     opacity: 0;
     animation: fadeInModal 0.5s ease-out forwards;
     max-width: 300px;
     z-index: 9999;
-  }
-  
-  /* Animation for the modal fade-in */
-  @keyframes fadeInModal {
+    overflow: hidden;
+}
+
+/* Animation for the modal fade-in */
+@keyframes fadeInModal {
     0% {
-      opacity: 0;
-      transform: translateY(-30px);
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9) rotate(-5deg);
     }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-15px) scale(1.05) rotate(0deg);
+    }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
     }
-  }
-  
-  /* Timer line animation */
-  .status-modal .timer-line {
+}
+
+/* Timer line animation */
+.status-modal .timer-line {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
-    height: 3px;
-    background-color: #28a745; /* Green color */
+    height: 4px;
+    background-color: #28a745;
+    /* Green color */
     animation: timerLine 10s linear forwards;
-  }
-  
-  /* Animation for the timer line */
-  @keyframes timerLine {
+    border-radius: 2px;
+}
+
+/* Animation for the timer line */
+@keyframes timerLine {
     0% {
-      width: 0;
+        width: 0;
     }
+
     100% {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  /* Optional: Style for the status text */
-  .status-modal p {
-    font-size: 14px;
+}
+
+/* Optional: Style for the status text */
+.status-modal p {
+    font-size: 15px;
     color: #333;
     margin: 0;
-    animation: fadeInText 0.5s ease-out;
-  }
-  
-  @keyframes fadeInText {
+    animation: fadeInText 0.8s ease-out, bounceText 1s ease-in-out infinite;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
     0% {
-      opacity: 0;
+        opacity: 0;
+        transform: translateY(10px);
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  /* Validation styles */
-  .error {
-    border-color: red !important;
+}
+
+/* Text bounce animation */
+@keyframes bounceText {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Validation styles */
+.error {
     animation: shake 0.3s ease-in-out;
-  }
-  
-  .success {
-    border-color: green !important;
-  }
-  
-  .error-text {
+}
+
+.success {
+    animation: fadeInGlow 0.5s ease-out;
+}
+
+/* Success glow animation */
+@keyframes fadeInGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(0, 255, 0, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    }
+}
+
+.error-text {
     color: red;
     font-size: 0.875rem;
     margin-top: 0.25rem;
-  }
-  
-  /* Shake animation for error */
-  @keyframes shake {
+    animation: fadeInText 0.3s ease-out, shakeText 0.5s ease-in-out;
+}
+
+/* Shake animation for error */
+@keyframes shake {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     25% {
-      transform: translateX(-5px);
+        transform: translateX(-5px);
     }
+
     50% {
-      transform: translateX(5px);
+        transform: translateX(5px);
     }
+
     75% {
-      transform: translateX(-5px);
+        transform: translateX(-5px);
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-  
+}
+
+/* Shake animation for text */
+@keyframes shakeText {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+}
+
+/* Hover effect for the modal */
+.status-modal:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
