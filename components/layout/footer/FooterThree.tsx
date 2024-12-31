@@ -101,7 +101,7 @@ const FooterThree = () => {
                   <li>
                     <Link href="about">
                       <i className="fa-regular fa-chevrons-right"></i>
-                      Hostech About
+                      Amohaa web  services About
                     </Link>
                   </li>
                   <li>
@@ -213,6 +213,11 @@ const FooterThree = () => {
                     <Link href="/">
                       <i className="fa-brands fa-youtube"></i>
                     </Link>
+
+                    <Link href="/">
+                    <i className="fa-brands fa-instagram"></i>
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -225,7 +230,7 @@ const FooterThree = () => {
           <div className="footer-wrapper d-flex align-items-center justify-content-between">
             <p>
               &copy; All Copyright {currentYear} by{" "}
-              <Link href="/">Hostech</Link>
+              <Link href="/">Amohaa web  services</Link>
             </p>
             <ul className="brand-logo">
               <li>

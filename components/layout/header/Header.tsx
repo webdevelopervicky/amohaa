@@ -108,9 +108,9 @@ const Header = () => {
                           <li className="has-dropdown active menu-thumb">
                             <Link href="/">
                               Home
-                              <i className="fas fa-angle-down"></i>
+                              {/* <i className="fas fa-angle-down"></i> */}
                             </Link>
-                            <ul className="submenu has-homemenu has-menu-home">
+                            {/* <ul className="submenu has-homemenu has-menu-home">
                               <li className="border-none">
                                 <div className="homemenu-items">
                                   <div className="homemenu-list">
@@ -165,7 +165,7 @@ const Header = () => {
                                   </div>
                                 </div>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li className="has-dropdown active d-xl-none">
                             <Link href="team" className="border-none">
@@ -189,7 +189,7 @@ const Header = () => {
                           </li>
                           <li className="has-dropdown menu-thumb">
                             <Link href="/">
-                              Pages
+                              Services
                               <i className="fas fa-angle-down"></i>
                             </Link>
                             <ul className="submenu has-homemenu">
@@ -209,7 +209,7 @@ const Header = () => {
                                           <h6>
                                             <Link href="about">About Us</Link>
                                           </h6>
-                                          <p>About hostech</p>
+                                          <p>About Amohaa web  services</p>
                                         </div>
                                       </div>
                                     </div>
@@ -375,7 +375,7 @@ const Header = () => {
                           </li>
                           <li className="has-dropdown active d-xl-none">
                             <Link href="/" className="border-none">
-                              Pages
+                            Services
                               <i className="fas fa-angle-down"></i>
                             </Link>
                             <ul className="submenu">
@@ -435,7 +435,7 @@ const Header = () => {
                                               Web Hosting
                                             </Link>
                                           </h6>
-                                          <p>About hostech</p>
+                                          <p>About Amohaa web services</p>
                                         </div>
                                       </div>
                                     </div>
@@ -450,7 +450,7 @@ const Header = () => {
                                         </div>
                                         <div className="content">
                                           <h6>
-                                            <Link href="https://store.amohaa.com/products/vps?tag=managed-vps">
+                                            <Link href="/Fully-managed-vps-host">
                                              managed vps hosting
                                             </Link>
                                           </h6>
@@ -488,7 +488,7 @@ const Header = () => {
                                         </div>
                                         <div className="content">
                                           <h6>
-                                            <Link href="https://store.amohaa.com/products/vps">
+                                            <Link href="/vps-hosting">
                                               VPS Hosting
                                             </Link>
                                           </h6>
@@ -507,7 +507,7 @@ const Header = () => {
                                         </div>
                                         <div className="content">
                                           <h6>
-                                            <Link href="https://store.amohaa.com/products/wordpress">
+                                            <Link href="/wordpress-hosting  ">
                                               WordPress Hosting
                                             </Link>
                                           </h6>
@@ -526,8 +526,8 @@ const Header = () => {
                                         </div>
                                         <div className="content">
                                           <h6>
-                                            <Link href="https://store.amohaa.com/products/business">
-                                             Web Hosting plus
+                                            <Link href="/cloud-hosting">
+                                            cloud hosting
                                             </Link>
                                           </h6>
                                           <p>Worldwide Data Center</p>
@@ -573,7 +573,7 @@ const Header = () => {
                             </ul>
                           </li>
 {/*===========================================*/}
-                          <li>
+                          {/* <li>
                             <Link href="domain">Domain 
                             <i className="fas fa-angle-down"></i>
                             </Link>
@@ -633,14 +633,14 @@ const Header = () => {
                                 </div>
                               </li>
                             </ul>
-                          </li>
+                          </li> */}
 {/*-----------------------------*/}
                           <li>
-                            <Link href="/news-grid">
-                              News
-                              <i className="fas fa-angle-down"></i>
+                            <Link href="/blog">
+                              Blog
+                              {/* <i className="fas fa-angle-down"></i> */}
                             </Link>
-                            <ul className="submenu">
+                            {/* <ul className="submenu">
                               <li>
                                 <Link href="/news-grid">News Grid</Link>
                               </li>
@@ -650,7 +650,7 @@ const Header = () => {
                               <li>
                                 <Link href="/news-details">News Details</Link>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li>
                             <Link href="contact">

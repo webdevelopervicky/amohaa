@@ -44,7 +44,7 @@ const AffiliateBanner = () => {
                 data-aos-duration="800"
                 data-aos-delay="300"
               >
-                Hostech Web Hosting Affiliate Program
+                Amohaa web  services Web Hosting Affiliate Program
               </h1>
               <Link
                 href="pricing"

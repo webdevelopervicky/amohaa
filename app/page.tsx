@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header/Header";
 import Banner from "@/components/layout/banner/Banner";
 // import DomainSection from "@/components/containers/home/DomainSection";
- import VDomainSection from "@/components/containers/home/Vicky_DomainSection";
+//  import VDomainSection from "@/components/containers/home/Vicky_DomainSection";
 import HostingHome from "@/components/containers/home/HostingHome";
 import PricingHome from "@/components/containers/home/PricingHome";
 import HomeCta from "@/components/containers/home/HomeCta";
@@ -19,7 +19,7 @@ const page = () => {
     <>
       <Header />
       <Banner />
-      <VDomainSection />
+      {/* <VDomainSection /> */}
       <HostingHome />
       <PricingHome />
       <HomeCta />

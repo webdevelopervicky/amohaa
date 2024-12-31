@@ -209,7 +209,7 @@ const HeaderTwo = () => {
                                           <h6>
                                             <Link href="about">About Us</Link>
                                           </h6>
-                                          <p>About hostech</p>
+                                          <p>About Amohaa web  services</p>
                                         </div>
                                       </div>
                                     </div>
@@ -435,7 +435,7 @@ const HeaderTwo = () => {
                                               Share Hosting
                                             </Link>
                                           </h6>
-                                          <p>About hostech</p>
+                                          <p>About Amohaa web  services</p>
                                         </div>
                                       </div>
                                     </div>

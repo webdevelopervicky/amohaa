@@ -248,6 +248,9 @@ const Footer = () => {
                       <i className="fab fa-facebook-f"></i>
                     </Link>
                     <Link href="/">
+                    <i className="fa-brands fa-instagram"></i>
+                    </Link>
+                    <Link href="/">
                       <i className="fab fa-twitter"></i>
                     </Link>
                     <Link href="/">
@@ -256,6 +259,10 @@ const Footer = () => {
                     <Link href="/">
                       <i className="fa-brands fa-youtube"></i>
                     </Link>
+
+                   
+
+                   
                   </div>
                 </div>
               </div>

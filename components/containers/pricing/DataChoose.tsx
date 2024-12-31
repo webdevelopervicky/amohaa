@@ -17,7 +17,7 @@ const DataChoose = () => {
             Why Choose Us
           </span>
           <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-            Why Choose Hostech
+            Why Choose Amohaa web  services
           </h2>
         </div>
         <div className="choose-us-top-inner">

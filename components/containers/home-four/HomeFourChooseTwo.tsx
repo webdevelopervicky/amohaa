@@ -27,7 +27,7 @@ const HomeFourChooseTwo = () => {
             data-aos-duration="800"
             data-aos-delay="300"
           >
-            Why Choose Hostech
+            Why Choose Amohaa web  services
           </h2>
           <p
             className="text-white "

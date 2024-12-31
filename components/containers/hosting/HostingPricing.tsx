@@ -19,7 +19,7 @@ const HostingPricing = () => {
             Pricing Plans
           </span>
           <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-            Get the More Powerful With Hostech <br /> Website Hosting Plans
+            Get the More Powerful With Amohaa web  services <br /> Website Hosting Plans
           </h2>
         </div>
         <div className="pricing-tab-header">

@@ -25,7 +25,7 @@ const HomeTwoService = () => {
                     data-aos-duration="800"
                     data-aos-delay="300"
                   >
-                    Hostech provide secure & web application hosting
+                    Amohaa web  services provide secure & web application hosting
                   </h2>
                 </div>
                 <div
